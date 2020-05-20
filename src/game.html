@@ -23,33 +23,59 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body onload="start_game()">
+    <div class="game_container">
+      <div class="tables">
+        <table class="align_it">
+          <tr>
+            <td>
+              <img src="../assets/images/balao_azul_grande.png" alt="balao_azul_grande">
+            </td>
+            <td class="text_counter">
+              <span id="num_ballons"></span>
+            </td>
+          </tr>
+        </table>
 
-    <div class="jumbotron text-center">
-      <h1>BALLONS POP!</h1>
-      <p>Resize this responsive page to see the effect!</p>
-    </div>
-    
-    <div class="start_container">
-      <div class="row">
-        <div class="col-sm-4 align_it">
-          <span>Choose your level:</span>
-          <select id="level">
-            <option value="1">Easy</option>
-            <option value="2">Regular</option>
-            <option value="3">Hard</option>
-          </select>
-        </div>
-        <div class="col-sm-4 align_it">
-          <span>Choose nº of balloons:</span>
-          <input type="number" min="0" step="1" id="num_balloons">
-        </div>
-        <div class="col-sm-4 align_it">
-          <img src="../assets/images/iniciar.png" onclick="callgame()" alt="iniciar">
-        </div>
+        <br />
+
+        <table class="align_it">
+          <tr>
+            <td>
+              <img src="../assets/images/balao_azul_grande_estourado.png" alt="balao_azul_grande_estourado">
+            </td>
+            <td class="text_counter">
+              <span id="num_ballons_popped"></span>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+
+        <table class="align_it">
+          <tr>
+            <td colspan="2" class="timer">
+              <span id="timer"></span>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+
+        <table class="align_it">
+          <tr>
+            <td colspan="2" class="align_it">
+              <img src="../assets/images/iniciar.png" onclick="start_game()" alt="iniciar">
+            </td>
+          </tr>
+        </table>
       </div>
+
+      <div id="parent_imageId" class="image">
+      </div>
+
     </div>
-    
+
    <!-- JS, Popper.js, and jQuery -->
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

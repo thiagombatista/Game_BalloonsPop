@@ -1,0 +1,43 @@
+.start_container {
+    width: 1000px;
+    margin: auto;
+}
+
+.align_it {
+    vertical-align: middle;
+    margin: auto;
+}
+
+.game_container {
+    margin: 10px auto;
+}
+
+.text_counter {
+    font-size: 40px;
+    color: blue;
+    font-weight: bold;
+}
+
+.tables {
+    float: left;
+}
+
+.image {
+    margin: 0 3px;
+    width: 600px;
+    height: 500px;
+    float: left;
+    background-image: url('../assets/images/cenario.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.timer {
+    width: 140px;
+    height: 132px;
+    background: url('../assets/images/cronometro.png') no-repeat;
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+}
