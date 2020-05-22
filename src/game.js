@@ -2,9 +2,15 @@ var timerId;
 var game_stopped;
 
 function callgame() {
+
     var selected_level = parseInt(document.getElementById('level').value);
     var selected_num_balloons = parseInt(document.getElementById('num_balloons').value);
 
+    // check chosen_numballoons
+    if(!(selected_num_balloons > 0)) {
+        alert('Choose a correct nº of balloons !'); return false;
+    }
+    
     window.location = 'game.html?level=' + selected_level + '&numballoons=' + selected_num_balloons;
 }
 
@@ -37,10 +43,6 @@ function start_game() {
                 alert('Choose a correct level !');
                 break;
         }
-
-        // check chosen_numballoons
-        if(chosen_numballoons > 0) {
-        } else {alert('Choose a correct nº of balloons !'); return false;}
 
         // fill the painel blanks
         document.getElementById('num_ballons').innerHTML = chosen_numballoons;
